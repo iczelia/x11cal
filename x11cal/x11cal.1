@@ -1,0 +1,61 @@
+." x11cal(1) - simple X11 calendar window
+.TH x11cal 1 "October 28, 2025" "x11cal 0.1"
+.SH NAME
+x11cal \- small and lightweight calendar widget for X11
+
+.SH SYNOPSIS
+.B x11cal
+
+.SH DESCRIPTION
+x11cal displays a compact, movable calendar in a simple X11 window. The current day is highlighted; days that belong to previous or next months are drawn dimmed. Interaction via the keyboard and mouse as described in the OPTIONS section below. x11cal updates itself at midnight (local time) so the highlight for "today" moves automatically without restarting the program.
+
+.SH INTERACTION
+.TP
+.B Mouse
+Left-button drag: move the window.
+.TP
+.B Keyboard
+.TP
+.B q, Escape
+Quit the program.
+.TP
+.B Up
+Advance the viewed month by one.
+.TP
+.B Down
+Move the viewed month back by one.
+.TP
+.B Page\_Up
+Advance the viewed year by one (i.e. +12 months).
+.TP
+.B Page\_Down
+Move the viewed year back by one (i.e. -12 months).
+.TP
+.B Home
+Reset the view to the current month and year.
+
+.SH EXIT STATUS
+.TP
+.B 0
+Normal termination (user closed the window or pressed q/Escape).
+.TP
+.B 1
+Failed to open X display (e.g. DISPLAY not set or connection refused).
+.TP
+.B 2
+Font initialization failed (cannot load or initialize embedded font via fontconfig/FreeType/Xft).
+.TP
+.B 3
+Background image initialization failed (cannot load the embedded PNG to a Pixmap).
+
+.SH ENVIRONMENT
+.TP
+.B DISPLAY
+Specifies the X server to connect to (standard X11 behaviour). If not set or not reachable the program will fail with exit status 1.
+
+.SH AUTHOR
+Kamila Szewczyk, <k@iczelia.net>
+
+.SH "SEE ALSO"
+.BR X(7) ,
+.BR xrm(5)

@@ -1,0 +1,12 @@
+[Unit]
+Description=D-Bus K16 Power Control Service
+Documentation=man:dbus-daemon(1)
+
+[Service]
+Type=dbus
+BusName=net.iczelia.K16BrightD
+ExecStart=/usr/local/libexec/k16brightd
+User=root
+
+[Install]
+WantedBy=multi-user.target

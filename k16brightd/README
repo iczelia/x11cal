@@ -1,0 +1,9 @@
+# Set governor of CPU0 to "powersave"
+dbus-send --system --dest=net.iczelia.K16BrightD \
+--type=method_call /net/iczelia/K16BrightD \
+net.iczelia.K16BrightD.SetGovernor int32:0 string:"powersave"
+
+# Set brightness of backlight device "intel_backlight" to 1200
+dbus-send --system --dest=net.iczelia.K16BrightD \
+--type=method_call /net/iczelia/K16BrightD \
+net.iczelia.K16BrightD.SetBrightness string:"intel_backlight" int32:1200

@@ -1,0 +1,5 @@
+[D-BUS Service]
+Name=net.iczelia.K16BrightD
+Exec=/usr/local/libexec/k16brightd
+User=root
+SystemdService=k16brightd.service

@@ -1,0 +1,2 @@
+CompileFlags:
+  Add: [-I/usr/include/freetype2, -I/usr/include/freetype2/freetype, -I/usr/include/dbus-1.0]
